@@ -141,7 +141,8 @@
     const out = [f('+--') + ' '.repeat(gap) + f('-'.repeat(width - gap) + '+')];
     out.push(row(f(esc(d.kind)), d.kind.length), row('', 0));
     for (let i = 0; i < rows; i++) out.push(row('', 0));
-    if (d.link) out.push(row('', 0), row(`<a href="${d.link}">&gt; more</a>`, 6));
+    const links = [[d.link, 'more'], [d.privacy, 'privacy']].filter(([href]) => href);
+    if (links.length) out.push(row('', 0), ...links.map(([href, label]) => row(`<a href="${href}">&gt; ${label}</a>`, label.length + 2)));
     out.push(f('+' + '-'.repeat(width + 2) + '+'));
     return out.join('\n');
   };
