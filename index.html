@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>g0byx3</title>
+<meta name="description" content="g0byx3, old-school developer and crafter.">
+<meta name="theme-color" content="#0b0b0c">
+<link rel="icon" href="img/rooster.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=Barlow+Condensed:wght@600;800&family=Caveat:wght@600&family=Silkscreen&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero" id="hero">
+  <h1 class="sr">g0byx3</h1>
+  <div class="stage"><canvas id="noise" aria-hidden="true"></canvas></div>
+  <p class="sub"><span>Personal webpage</span><span id="clock"></span></p>
+</header>
+
+<main>
+  <p class="bio">Old-school developer, crafter. The <span class="underline" style="--t:3.6s">serious</span> version of me lives at <a href="https://alexisgobe.github.io/">alexisgobe.github.io</a>. This one makes small, mostly <span class="fix" style="--t:2.4s"><s>useful</s><em>useless</em></span> things in the <span class="fix"><s>evenings</s><em>nights</em></span>, just to see if they can be done.</p>
+
+  <p class="hint" id="hint">// things i made. hover one.</p>
+  <div class="projects" id="projects">
+    <ul class="works">
+      <li class="work" tabindex="0" aria-expanded="false"
+          data-name="Earth Orbit" data-kind="Wear OS watch face" data-video="img/earth-orbit.mp4"
+          data-info="Since I will __never__ see it like this by myself, I made it ~~huge~~ tiny and strapped it to my wrist. Lit by the real sun. Satellites for hands.">
+        <img class="thumb" src="img/earth-orbit-still.jpg" alt="Earth Orbit">
+      </li>
+      <li class="work" tabindex="0" aria-expanded="false"
+          data-name="Doomsday" data-kind="Wear OS watch face" data-video="img/doomsday.mp4"
+          data-info="The __actual__ Doomsday Clock, seen through night vision. Seconds to midnight, all day long. ~~Terrifying.~~ Very reassuring. Also tells the time.">
+        <img class="thumb" src="img/doomsday-still.jpg" alt="Doomsday">
+      </li>
+      <li class="work" tabindex="0" aria-expanded="false"
+          data-name="CrunchTime" data-kind="iOS &amp; Android app" data-link="https://sillyelephantdevelopers.github.io/crunchertime-public/"
+          data-info="Had to burn some fat. ~~Went for a run.~~ Wrote a workout app instead. The app keeps telling me to __work out__.">
+        <div class="thumb ct" role="img" aria-label="CrunchTime"></div>
+      </li>
+    </ul>
+    <div class="pop" id="pop" aria-live="polite">
+      <div class="pop-media"></div>
+      <div class="box"><pre class="frame"></pre><span class="title"></span><div class="note"></div></div>
+    </div>
+  </div>
+
+  <p class="secret">you found the invisible line. now go make something small.</p>
+
+  <footer>
+    <nav><a href="https://github.com/g0byx3">github</a><a href="https://alexisgobe.github.io/">day job</a></nav>
+    <span class="credits">
+      <button id="rooster" title="cocorico"><img src="img/rooster.svg" alt="rooster"></button>
+      <span><span id="coded">co-coded with</span> <span id="who"></span></span>
+    </span>
+  </footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
